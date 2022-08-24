@@ -1,0 +1,103 @@
+{
+    "page": {
+        "title": "My Test Page",
+        "nextPage": "/halloNext",
+        "prevPage": "/halloPrev"
+    },
+    "head": {
+        "title": "Head Title",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima facilis harum officiis distinctio nisi consequatur animi deleniti sed optio voluptate dolorum nesciunt quisquam unde ratione, aliquid eos repudiandae incidunt."
+    },
+    "body": [
+        {
+            "intro": {
+                "title": "Intro Title",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima facilis harum officiis distinctio nisi consequatur animi deleniti sed optio voluptate dolorum nesciunt quisquam unde ratione, aliquid eos repudiandae incidunt."
+            },
+            "segments": [
+                {
+                    "title": "Segment 1 Content",
+                    "contents": [
+                        {
+                            "type": "text",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima facilis harum officiis distinctio nisi consequatur animi deleniti sed optio voluptate dolorum nesciunt quisquam unde ratione, aliquid eos repudiandae incidunt."
+                        },
+                        {
+                            "type": "imgH",
+                            "src": "/assets/0.jpeg",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima facilis harum officiis distinctio nisi consequatur animi deleniti sed optio voluptate dolorum nesciunt quisquam unde ratione, aliquid eos repudiandae incidunt."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima facilis harum officiis distinctio nisi consequatur animi deleniti sed optio voluptate dolorum nesciunt quisquam unde ratione, aliquid eos repudiandae incidunt."
+                        }
+                    ]
+                },
+                {
+                    "title": "Segment 1 Content",
+                    "contents": [
+                        {
+                            "type": "text",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima facilis harum officiis distinctio nisi consequatur animi deleniti sed optio voluptate dolorum nesciunt quisquam unde ratione, aliquid eos repudiandae incidunt."
+                        },
+                        {
+                            "type": "imgH",
+                            "src": "/assets/1.png",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima facilis harum officiis distinctio nisi consequatur animi deleniti sed optio voluptate dolorum nesciunt quisquam unde ratione, aliquid eos repudiandae incidunt."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima facilis harum officiis distinctio nisi consequatur animi deleniti sed optio voluptate dolorum nesciunt quisquam unde ratione, aliquid eos repudiandae incidunt."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "intro": {
+                "title": "Intro Title",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima facilis harum officiis distinctio nisi consequatur animi deleniti sed optio voluptate dolorum nesciunt quisquam unde ratione, aliquid eos repudiandae incidunt."
+            },
+            "segments": [
+                {
+                    "type": "info",
+                    "title": "Segment 1 Content",
+                    "contents": [
+                        {
+                            "type": "text",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima facilis harum officiis distinctio nisi consequatur animi deleniti sed optio voluptate dolorum nesciunt quisquam unde ratione, aliquid eos repudiandae incidunt."
+                        },
+                        {
+                            "type": "imgH",
+                            "src": "/assets/2.png",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima facilis harum officiis distinctio nisi consequatur animi deleniti sed optio voluptate dolorum nesciunt quisquam unde ratione, aliquid eos repudiandae incidunt."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima facilis harum officiis distinctio nisi consequatur animi deleniti sed optio voluptate dolorum nesciunt quisquam unde ratione, aliquid eos repudiandae incidunt."
+                        }
+                    ]
+                },
+                {
+                    "type": "warning",
+                    "title": "Segment 1 Content",
+                    "contents": [
+                        {
+                            "type": "text",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima facilis harum officiis distinctio nisi consequatur animi deleniti sed optio voluptate dolorum nesciunt quisquam unde ratione, aliquid eos repudiandae incidunt."
+                        },
+                        {
+                            "type": "imgH",
+                            "src": "/assets/3.jpeg",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima facilis harum officiis distinctio nisi consequatur animi deleniti sed optio voluptate dolorum nesciunt quisquam unde ratione, aliquid eos repudiandae incidunt."
+                        },
+                        {
+                            "type": "text",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima facilis harum officiis distinctio nisi consequatur animi deleniti sed optio voluptate dolorum nesciunt quisquam unde ratione, aliquid eos repudiandae incidunt."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

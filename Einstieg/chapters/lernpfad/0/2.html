@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Benedict Wiesler">
+    <meta name="keywords" content="JS Tutorial Einstieg">
+    <meta name="description" content="Anfängerfreundliches Tutorial für JS in Bezug auf HTML-Manipulation">
+
+    <link href="../../../assets/JS.png" type="icon type" rel="icon">
+    <link rel="stylesheet" href="../../../styles/iv.css">
+    <link rel="stylesheet" href="../../../styles/frame.css">
+    <link rel="stylesheet" href="../../../styles/classes.css">
+    <link rel="stylesheet" href="../../../styles/tablet.css" media="screen and (max-width: 950px)">
+    <link rel="stylesheet" href="../../../styles/mobile.css" media="screen and (max-width: 750px)">
+
+    <script src="../../../scripts/functions.js"></script>
+    <script src="../../../scripts/include.js"></script>
+    <script src="../../../scripts/iv.js"></script>
+    <script src="https://lern-altgriechisch.de/base/font-awesome.js"></script>
+    <script src="sketch.js"></script>
+
+    <title>Maxims JavaScript-Einstieg</title>
+</head>
+
+<body>
+    <div include="../../../include/header.html"></div>
+    <div include="../../../include/iv.html"></div>
+    <div class="scroll-barcase">
+        <div class="scroll-bar"></div>
+    </div>
+    <div class="page-wrap">
+        <div class="page">
+            <div class="page-head">
+                <div class="page-head-title">Variablen</div>
+                <div class="page-head-text">
+                    Variablen sind sehr praktische Dinge in einer Programmiersprache.
+                    Sie erlauben uns Werte zwischenzuspeichern, um sie später weiter zu verwenden.
+                    Dadurch werden manche Dinge erst möglich, andere deutlich einfacher und übersichtlicher.
+                </div>
+            </div>
+            <div class="page-foot">
+                <div class="direct-group">
+                    <div class="direct-left">
+                        <div class="back-btn btn" href="1.html">Zurück</div>
+                    </div>
+                    <div class="direct-mid"></div>
+                    <div class="direct-right">
+                        <div class="fore-btn btn" href="3.html">Weiter</div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-body">
+
+                <div class="chapter-intro">
+                    <div class="chapter-title">Syntax</div>
+                    <div class="chapter-descr">
+                        Eine Variable lässt sich verschieden definieren und kann verschiedene Datentypen halten.
+                        In JS muss man nicht den Datentyp deklarieren, da sich Variablen an den Datentyp anpassen.
+                    </div>
+                </div>
+
+                <div class="chapter-text">
+                    <div class="chapter-text-title">var, let, const</div>
+                    <div class="chapter-text-text">
+                        Die Schlüsselwörter <span class="bold">var</span> und <span class="bold">let</span> sind so ziemlich die gleichen.
+                        Sie erzeugen eine Variable, die völlig neu definiert werden oder verändert werden kann.
+                        Das Schlüsselwort <span class="bold">const</span> hingegen erzeugt eine Konstante.
+                        Sie zeichnet aus, dass man ihren Wert, sobald einmal definiert, nicht mehr verändern kann.
+                        Auf diese Weise kann man das Rumpfuschen am Code von Nutzern vermeiden.
+                    </div>
+                    <div class="code">
+                        <code>
+<blue>var</blue> <y>a</y> = 5;
+<blue>let</blue> <y>b</y> = 10, <y>c</y> = 23;
+<blue>const</blue> <y>d</y> = <y>c</y> - (<y>a</y>+<y>b</y>);
+console.log(<y>d</y>);   <green>// Gibt 8 aus</green>
+<y>d</y> = <y>a</y> + <y>b</y> + <y>c</y>;    <green>// Gibt einen Fehler, weil d eine Konstante ist.</green>
+<y>a</y> = <y>b</y> + <y>c</y> + <y>d</y>;    <green>// Gibt keinen Fehler, weil a eine Variable ist.</green>
+console.log(a);   <green>// Gibt 41 aus</green>
+                        </code>
+                    </div>
+                    <div class="chapter-text-text">
+                        Man kann mehrere Variablen oder Konstanten mit einem Statement definieren, indem man die Variablen mit einem Komma trennt.
+                        Wie das genau aussieht, siehst du in Zeile 2, wo b und c gleichzeitig definiert sind.
+                        Du kannst auch Variablen erstellen, um ihnen eine <span class="bold">Kapselung (Scope)</span> zu geben.
+                        Dazu auf der <a href="../../erklaerungen/2/">Erklärseite zu Variablen</a> mehr.
+                    </div>
+                </div>
+
+                <div class="chapter-intro">
+                    <div class="chapter-title">Beispiele</div>
+                    <div class="chapter-descr">
+                        Wie oben schon erwähnt, können wir mit Variablen den Prozess vom Auswählen von Elementen
+                        hübscher und übersichtlicher und sogar ein bisschen schneller machen.
+                        Wir werden Übungen machen, die wir schon gemacht haben, aber auch Neue.
+                    </div>
+                </div>
+
+                <div class="chapter-text">
+                    <div class="chapter-text-title">
+                        EINS, ZWEI, DREI, VIER
+                    </div>
+                    <div class="chapter-text-text">
+                        Greifen wir das Beispiel der Count-Elemente des Selektorkapitels auf.
+                    </div>
+                    <div class="code">
+                        <code>
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;title&gt;My First Class-Selector&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div <yellow>class</yellow>=<purple>&quot;myCount&quot;</purple>&gt;&lt;/div&gt;
+        &lt;div <yellow>class</yellow>=<purple>&quot;myCount&quot;</purple>&gt;&lt;/div&gt;
+        &lt;div <yellow>class</yellow>=<purple>&quot;myCount&quot;</purple>&gt;&lt;/div&gt;
+        &lt;div <yellow>class</yellow>=<purple>&quot;myCount&quot;</purple>&gt;&lt;/div&gt;
+
+        &lt;!-- Hier kommt der Skript rein, der die div.myCount manipuliert. --&gt;
+        &lt;script&gt; ... &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </div>
+                    <div class="chapter-text-text">
+                        Durch die Verwendung von einer Variable können wir es folgerndermassen aufbauen:
+                    </div>
+                    <div class="code">
+                        <code>
+<blue>let</blue> <y>countElements</y> = document.querySelectorAll(<purple>".myCount"</purple>);
+<y>countElements</y><red>[0]</red>.innerHTML = <purple>"EINS"</purple>;
+<y>countElements</y><red>[1]</red>.innerHTML = <purple>"ZWEI"</purple>;
+<y>countElements</y><red>[2]</red>.innerHTML = <purple>"DREI"</purple>;
+<y>countElements</y><red>[3]</red>.innerHTML = <purple>"VIER"</purple>;
+                        </code>
+                    </div>
+                    <div class="chapter-text-text">
+                        Kurze Erklärung:
+                        <br>
+                        Speichere die NodeList aller div.myCount unter dem Namen <span class="bold">countElements</span> ab.
+                        Dann verändere das erste Element aus der NodeList... et cetera.
+                        <br><br>
+                        Der Vorteil an dieser Schreibweise ist, dass die Abfrage nach der Collection <span class="bold">nur ein Mal</span> von Statten läuft
+                        und dann gespeichert wird anstatt 4 Mal das selbe abzufragen.
+                        Das erhöht die Effizienz. Dadurch, dass man die Variable passend bennenen kann,
+                        wird der Code auch <span class="bold">lesbarer</span> und leichter zu warten.
+                    </div>
+                </div>
+
+                <div class="chapter-text">
+                    <div class="chapter-text-title">
+                        Toggle-Flipflop
+                    </div>
+                    <div class="chapter-text-text">
+                        Ein Toggle-Flipflop ist eine Schaltung,
+                        die mit nur einem Eingang bei Aktivierung immer den Zustand wechselt: An oder Aus.
+                        Der Sinn der Sache ist, dass gespeichert werden muss, was der Zustand ist,
+                        um herauszufinden, wie der Zustand sein wird.
+                        <br>
+                        Ist er <green>an</green> (Zustand) mache <red>aus</red> (Änderung).<br>
+                        Ist er <red>aus</red> (Zustand) mache <green>an</green> (Änderung).
+                    </div>
+                    <div class="code">
+                        <code>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My First Toggle-Flipflop&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div <yellow>id</yellow>=<purple>&quot;tff&quot;</purple>&gt;OFF&lt;/div&gt;
+
+        &lt;!-- Hier kommt der Skript rein, der das TFF funktionierend macht. --&gt;
+        &lt;script&gt; ... &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </div>
+                    <div class="chapter-text-text">
+                        Unser Flipflop besteht darin, das innerHTML im TFF-Element zwischen "Aus" und "An" hin und her zu schalten.
+                        Für unser folgendes Programm brauchen wir ein paar mehr Dinge, als nur Selektoren und Variablen.
+                        Jetzt kommen <span class="bold">if-Statements</span> und <span class="bold">Funktionen</span> ins Spiel.
+                        Sie werden nach der Erarbeitung näher beschrieben sein.
+                        Aufgepasst: Wir benutzen den <inlinecode>querySelector()</inlinecode>,
+                        der keine Collection, sondern nur ein HTML-Element ausgibt.
+                    </div>
+                    <div class="code">
+                        <code>
+<blue>let</blue> <y>myTff</y> = document.querySelector(<purple>"#tff"</purple>);
+<blue>let</blue> <y>tffOn</y> = <red>false</red>;
+
+<blue>function</blue> toggleFlipFlop(){
+    <blue>if</blue>(<y>tffOn</y>){
+        <y>myTff</y>.innerHTML = <purple>"OFF"</purple>;
+    }<blue>else</blue>{
+        <y>myTff</y>.innerHTML = <purple>"ON"</purple>;
+    }
+    <y>tffOn</y> = !<y>tffON</y>;
+}
+                        </code>
+                    </div>
+                    <div class="text-text">
+                        Kurze Erklärung in Worten:
+                        <br>
+                        Wenn das tff <green>an</green> ist (tffOn == true oder einfach nur tffOn),
+                        dann setze das innerHTML des tffs auf <red>aus</red>.
+                        Ansonsten (else, also wenn tffOn == false oder einfach nur !tffOn) mache es <green>an</green>.
+                        <br>
+                        Das letze Statement sagt: Setze die Variable <span class="bold">tffON</span> auf das,
+                        was die Variable gerade <red>nicht</red> ist. Also wenn <green>true</green> mach <red>false</red>,
+                        wenn <red>false</red> mach <green>true</green>.
+                        <br>
+                        <br>
+                        Wenn man nun in die Konsole geht und die Funktion <span class="bold">toggleFlipFlop</span> ausführt,
+                        ändert sich der Inhalt beim ersten Mal zu "ON", beim zweiten Mal wieder zu "OFF" und so weiter und so fort.
+                    </div>
+                </div>
+
+                <div class="chapter-text chapter-info">
+                    <div class="chapter-text-title">
+                        Das If-Statement
+                    </div>
+                    <div class="chapter-text-text">
+                        Ein <span class="bold">if-Statement</span> lässt das Programm unter einer bestimmten
+                        <span class="bold">Bedingung</span> (Condition) entscheiden, welcher Codeblock ausgeführt werden soll.
+                        Das Schlüsselwort <span class="bold">else</span> gibt den Block von Code an, der ausgeführt werden soll,
+                        wenn die Bedingung nicht erfüllt ist.
+                    </div>
+                </div>
+
+                <div class="chapter-text chapter-info">
+                    <div class="chapter-text-title">
+                        Funktionen
+                    </div>
+                    <div class="chapter-text-text">
+                        Eine <span class="bold">Funktion</span> ist ein Block aus Code,
+                        der auf Abruf ausgeführt wird. Er kann genauso <span class="bold">mehrmals</span> ausgeführt werden.
+                        Du kannst die Funktion rufen,
+                        indem du den Namen der Funktion in die <span class="bold">Konsole</span> eingibst der Entwicklertools,
+                        aber auch direkt in deinem Programm.
+                        Die Entwicklertools findest du mit "Rechtsklick -> Untersuchen" oder über die Tastenkombination "Strg Shift i".
+                        <br><br>
+                        Zu bestimmten Ereignissen, <span class="bold">Events</span> genannt kann man auch sagen,
+                        dass eine Funktion ausgeführt werden soll. Zum Beispiel beim Klick auf ein bestimmtes Element.
+                    </div>
+                </div>
+            </div>
+            <div class="page-foot">
+                <div class="direct-group">
+                    <div class="direct-left">
+                        <div class="back-btn btn" href="1.html">Zurück</div>
+                    </div>
+                    <div class="direct-mid">
+                        Soweit verstanden?
+                        Bei Fragen klicke <a target="_blank" href="https://web.whatsapp.com">hier</a>.
+                    </div>
+                    <div class="direct-right">
+                        <div class="fore-btn btn" href="3.html">Weiter</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Benedict Wiesler">
+    <meta name="keywords" content="JS Tutorial Einstieg">
+    <meta name="description" content="Anfängerfreundliches Tutorial für JS in Bezug auf HTML-Manipulation">
+
+    <link href="../../../assets/JS.png" type="icon type" rel="icon">
+    <link rel="stylesheet" href="../../../styles/iv.css">
+    <link rel="stylesheet" href="../../../styles/frame.css">
+    <link rel="stylesheet" href="../../../styles/classes.css">
+    <link rel="stylesheet" href="../../../styles/tablet.css" media="screen and (max-width: 950px)">
+    <link rel="stylesheet" href="../../../styles/mobile.css" media="screen and (max-width: 750px)">
+
+    <script src="../../../scripts/functions.js"></script>
+    <script src="../../../scripts/include.js"></script>
+    <script src="../../../scripts/iv.js"></script>
+    <script src="https://lern-altgriechisch.de/base/font-awesome.js"></script>
+    <script src="sketch.js"></script>
+
+    <title>Maxims JavaScript-Einstieg</title>
+</head>
+
+<body>
+    <div include="../../../include/header.html"></div>
+    <div include="../../../include/iv.html"></div>
+    <div class="scroll-barcase">
+        <div class="scroll-bar"></div>
+    </div>
+    <div class="page-wrap">
+        <div class="page">
+            <div class="page-head">
+                <div class="page-head-title">Funktionen</div>
+                <div class="page-head-text">
+                    Funktionen sind Code-Blöcke, die ausgeführt werden, wenn man sie ruft.
+                    Sie haben den Zweck, lange und unübersichtliche Codes zu verübersichtlichen
+                    und den selben Code mit verschiedenen Eingangswerten wiederbenutzbar zu machen.
+                </div>
+            </div>
+            <div class="page-foot">
+                <div class="direct-group">
+                    <div class="direct-left">
+                        <div class="back-btn btn" href="2.html">Zurück</div>
+                    </div>
+                    <div class="direct-mid"></div>
+                    <div class="direct-right">
+                        <div class="fore-btn btn" href="../1/">Weiter</div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-body">
+
+                <div class="chapter-intro">
+                    <div class="chapter-title">Syntax</div>
+                    <div class="chapter-descr">
+                        Es gibt 2 Arten eine Funktion zu deklarieren:
+                        Entweder als Variable oder mit dem <span class="bold">function</span>-Schlüsselwort.
+                        Die zweite Methode ist gängiger, dennoch ist es gut zu wissen, was eine Funktion genau ist, und, was sie kann.
+                    </div>
+                </div>
+
+                <div class="chapter-text">
+                    <div class="chapter-text-title">Das function-Schlüsselwort</div>
+                    <div class="chapter-text-text">
+                        Um einer Funktion zu deklarieren, brauchst du folgenden Code:
+                    </div>
+                    <div class="code">
+                        <code>
+<blue>function</blue> <brown>functionName</brown>(<y>param1</y>, <y>param2</y>, ...){
+    <green>// some Code</green>
+    <green>// some more Code</green>
+    <green>// eventuell ein return-Statement</green>
+}
+                        </code>
+                    </div>
+                    <div class="chapter-text-text">
+                        Diese Funktion kannst du jetzt rufen,
+                        indem du einfach den Funktionsname mit passenden Parametern in deinen Code oder in die Console schreibst.
+                        Du kannst diese Funktion auch einem Event zuweisen, doch dazu später.
+                    </div>
+                    <div class="code">
+                        <code>
+<brown>functionName</brown>(<purple>"Hello"</purple>, <purple>"World"</purple>);
+                        </code>
+                    </div>
+                </div>
+
+                <div class="chapter-intro">
+                    <div class="chapter-title">Parameter</div>
+                    <div class="chapter-descr">
+                        Was eine Funktion so praktisch macht, ist,
+                        dass sie für verschiedene Inputs verschiedene Outputs haben können.
+                        Diese <span class="bold">Parameter</span> werden direkt in die runden Klammern geschrieben.
+                        In der Definition der Funktion werden an ihrer Stelle Variablen benutzt.
+                    </div>
+                </div>
+
+                <div class="chapter-text">
+                    <div class="chapter-text-title">writeToElement-Beispiel</div>
+                    <div class="chapter-text-text">
+                        Nehmen wir an, wir wollen eine Funktion, die 2 <span class="bold">Inputs</span>, also Parameter, hat:
+                        <br>
+                        Ein <span class="bold">String</span>, der bestimmtwo reingeschrieben werden soll
+                        <br>
+                        und
+                        <br>
+                        Ein <span class="bold">Element</span>, in das der String reingeschrieben wird.
+                        <br>
+                        <br>
+                        Überlegen wir uns die Befehlskette:
+                        <br>
+                        Gegeben ist <span class="bold">el</span> und <span class="bold">str</span>.
+                        <br>
+                        Setze das innerHTML von <span class="bold">el</span> auf <span class="bold">str</span>.
+                        <br><br>
+                        Mit dem im Hinterkopf, können wir nun unseren Code schreiben.
+                        Doch zuallererst brauchen wir ein Markup:
+                    </div>
+                    <div class="code">
+                        <code>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My First useless Function&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div <yellow>id</yellow>=<purple>&quot;demo1&quot;</purple>&gt; Ich bin 1 &lt;/div&gt;
+        &lt;div <yellow>id</yellow>=<purple>&quot;demo2&quot;</purple>&gt; Ich bin 2 &lt;/div&gt;
+        &lt;div <yellow>id</yellow>=<purple>&quot;demo3&quot;</purple>&gt; Ich bin 3 &lt;/div&gt;
+        &lt;div <yellow>id</yellow>=<purple>&quot;demo4&quot;</purple>&gt; Ich bin 4 &lt;/div&gt;
+
+        <green>&lt;!-- Funktion wird hier definiert. --&gt;</green>
+        &lt;script&gt; ... &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </div>
+                    <div class="chapter-text-text">
+                        Wir wollen nun also eine Funktion schreiben.
+                        Um sie gleich testen zu können, wenden wir die Funktion direkt unter der Definition auf ein Element an.
+                    </div>
+                    <div class="code">
+                        <code>
+<blue>let</blue> <y>el2</y> = document.querySelector(<purple>"#demo2"</purple>);
+
+<blue>function</blue> <brown>writeToElement</brown>(<y>el</y>, <y>str</y>){
+    <y>el</y>.innerHTML = <y>str</y>;
+}
+
+<brown>writeToElement</brown>(<y>el2</y>, <purple>"Ich bin durch eine Funktion manipuliert"</purple>);
+                        </code>
+                    </div>
+                </div>
+                <div class="chapter-text">
+                    <div class="chapter-text-title">Nützliche Funktionen</div>
+                    <div class="chapter-text-text">
+                        Das Prinzip einer Funktion sollte mittlerweile klar sein.
+                        Doch lass uns doch mal etwas Nützliches damit machen.
+                        Würde es uns nicht extrem helfen,
+                        wenn wir nicht immer <span class="bold">document.queryS...</span> schreiben müssten,
+                        sondern einfach <span class="bold">get</span>?
+                        Dazu könnten wir einfach eine Funktion schreiben, die uns das Element der Suche zurückgibt.
+                        Dazu benötigen wir das <span class="bold">return-Statement</span>.
+                    </div>
+                </div>
+
+                <div class="chapter-text chapter-info">
+                    <div class="chapter-text-title">Das return-Statement</div>
+                    <div class="chapter-text-text">
+                    Das return-Statement ist zum <span class="bold">Beenden</span> von Funktionen da.
+                    Beim return-Statement stoppt eine Funktion und gibt einen Wert zurück.
+                    Dieser Wert wird wie "eingesetzt" an den Ort, wo die Funktion steht, die gerufen wurde.
+                    Am besten lässt sich das an der Funktion document.querySelector() sehen.
+                    </div>
+                    <div class="code">
+                    <code>
+<blue>let</blue> <y>erstesDiv</y> = document.querySelector(<purple>"div"</purple>);
+                    </code>
+                    </div>
+                    <div class="chapter-text-text">
+                    Die Variable <span class="bold">erstesDiv</span> bekommt keineswegs
+                    den Wert <span class="bold">document.querySelector(...)</span>,
+                    sondern den Wert, der für die Funktion eingesetzt wird.
+                    Die Funktion document.querySelector(...) hat nämlich am Ende seiner Definition ein return-Statement,
+                    das das gefundene Element zurückgibt.
+                    </div>
+                </div>
+
+                <hr class="chapter-border">
+
+                <div class="chapter-text chapter-info">
+                    <div class="chapter-text-title">Libraries</div>
+                    <div class="chapter-text-text">
+                    Libraries sind JS-files, die dir eine Reihe voll Funktionen bieten,
+                    die du dann in deinem Code benutzen kannst.
+                    Sie sind meist einfacher zu lesen oder haben mehr Anwendungsmöglichkweiten.
+                    Um eine Library zu benutzen, musst du sie einfach nur im HEAD verlinken.
+                    </div>
+                    <div class="code">
+                    <code>
+&lt;script <y>src</y>=<purple>&quot;https://code.example.com/libraries/myLibrary.js&quot;</purple>&gt;&lt;/script&gt;
+                    </code>
+                    </div>
+                </div>
+
+                <div class="chapter-intro">
+                    <div class="chapter-title">Eigene Library</div>
+                    <div class="chapter-descr">
+                        Wir sind nun in der Lage, eine Funktion zu schreiben, sie zu rufen,
+                        ihr andere Inputs zu geben und zuguterletzt einen Wert von ihr zurückzubekommen.
+                        Lass uns dieses Wissen nun anwenden und unsere kleine Mini-Library schreiben.
+                        Sie soll die Funktionen
+                        <span class="bold">get</span>,
+                        <span class="bold">getAll</span> und
+                        <span class="bold">getBy</span>
+                        beinhalten.
+                    </div>
+                </div>
+
+                <div class="chpter-text">
+                    <div class="chapter-text-title">Verlinkung</div>
+                    <div class="chapter-text-text">
+                        Um unsere Library zu verlinken, musst du ersteinmal die Datei anlegen.
+                        Im Beispiel wird die Library <span class="bold">selector.js</span> heissen.
+                        Speichere die Datei also an einem bestimmten Ort und verlinke sie in deinem HTML mit einem passenden Link.
+                    </div>
+                    <div class="code">
+                        <code>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My first self-made Library&lt;/title&gt;
+
+        <green>&lt;!-- Library wird hier verlinkt. --&gt;</green>
+        &lt;script <y>src</y>=<purple>&quot;path/to/library/selector.js&quot;</purple>&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div <yellow>id</yellow>=<purple>&quot;demo1&quot;</purple>&gt; Ich bin 1 &lt;/div&gt;
+        &lt;div <yellow>id</yellow>=<purple>&quot;demo2&quot;</purple>&gt; Ich bin 2 &lt;/div&gt;
+        &lt;div <yellow>id</yellow>=<purple>&quot;demo3&quot;</purple>&gt; Ich bin 3 &lt;/div&gt;
+        &lt;div <yellow>id</yellow>=<purple>&quot;demo4&quot;</purple>&gt; Ich bin 4 &lt;/div&gt;
+
+        <green>&lt;!-- Programm wird hier ausgeführt. --&gt;</green>
+        &lt;script&gt; ... &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </div>
+                    <div class="chapter-text-text">
+                        Jetzt haben wir die Library erfolgreich verlinkt, nur steht noch nichts darin.
+                        Um das zu ändern, widmen wir uns jetzt der Funktionen in der Library.
+                    </div>
+                </div>
+
+                <div class="chapter-text">
+                    <div class="chapter-text-title">selector.js</div>
+                    <div class="chapter-text-text">
+                        Fangen wir mit der <span class="bold">get-Funktion</span> an.
+                        Wir haben einen Input namens <span class="bold">i</span> und einen Output:
+                        Das Element, das bei der Funktion
+                        <inlinecode>document.querySelector(<span class="bold">i</span>)</inlinecode> herauskommt.
+                        Das ganze im Code geschrieben sieht folgendermassen aus:
+                    </div>
+                    <div class="code">
+                        <code>
+<blue>function</blue> <brown>get</brown>(<y>sel</y>){
+    <blue>return</blue> document.querySelector(<y>sel</y>);
+}
+                        </code>
+                    </div>
+                    <div class="chapter-text-text">
+                        Für die Funktion <span class="bold">getAll</span> sieht der Code ganz ähnlich aus.
+                        Wir müssen nur zwei kleine Dinge anpassen:
+                        <br>
+                        1. Den <span class="bold">Funktionsnamen</span>.
+                        <br>
+                        2. Die <span class="bold">querySelector</span>-Funktion zu <span class="bold">querySelectorAll</span> ändern.
+                    </div>
+
+                    <div class="code">
+                        <code>
+<blue>function</blue> <brown>getAll</brown>(<y>sel</y>){
+    <blue>return</blue> document.querySelectorAll(<y>sel</y>);
+}
+                        </code>
+                    </div>
+                    <div class="chapter-text-text">
+                        Der Code für die Funktion <span class="bold">getBy</span> ist ein bisschen komplexer, aber völlig machbar.
+                        Doch lass ihn uns erst in Worten überlegen.
+                        Wir haben einen Input <span class="bold">type</span> und einen <span class="bold">sel</span>.
+                        Ersteres steht für den Typ, welches getElement... Funktion ausgeführt werden soll.
+                        Letzteres für den Selektions-String, der in den Selektor eingesetzt wird.
+                        <br><br>
+                        Wenn <span class="bold">type</span> ist <purple>"id"</purple>,
+                        <br>
+                        gib getElementById(<span class="bold">sel</span>) zurück,
+                        <br>
+                        sonst, wenn <span class="bold">type</span> ist...
+                        <br><br>
+                        Das geht so weiter, bis wir alle Typen durch sind.
+                        Es werden zwei mögliche Umsetzungen hier zur Verfügung stehen, das Erste wird ein <span class="bold">(if, else if, else)-Statement</span>
+                        benutzen, während das andere den <span class="bold">Switch-Block</span> benutzen wird.
+                        <br><br>
+                        Hier die erste Umsetzung:
+                    </div>
+                    <div class="code">
+                        <code>
+<blue>function</blue> <brown>getBy</brown>(<y>type</y>, <y>sel</y>){
+    <blue>if</blue>( <y>type</y> == <purple>"id"</purple> ){
+        <blue>return</blue> document.getElementById(<y>sel</y>);
+    }<blue>else if</blue>( <y>type</y> == <purple>"class"</purple> ){
+        <blue>return</blue> document.getElementsByClassName(<y>sel</y>);
+    }<blue>else if</blue>( <y>type</y> == <purple>"tag"</purple> ){
+        <blue>return</blue> document.getElementsByTagName(<y>sel</y>);
+    }<blue>else</blue>{
+        console.<red>error</red>(<purple>"Type kann nur die Werte id, class und tag annehmen."</purple>);
+    }
+}
+                        </code>
+                    </div>
+                    <div class="chapter-text-text">
+                        Und hier die zweite:
+                    </div>
+                    <div class="code">
+                        <code>
+<blue>function</blue> <brown>getBy</brown>(<y>type</y>, <y>sel</y>){
+    <blue>switch</blue>(<y>type</y>){
+        <blue>case</blue> <purple>"id"</purple>:
+            <blue>return</blue> document.getElementById(<y>sel</y>);
+            <blue>break</blue>;
+        <blue>case</blue> <purple>"class"</purple>:
+            <blue>return</blue> document.getElementsByClassName(<y>sel</y>);
+            <blue>break</blue>;
+        <blue>case</blue> <purple>"tag"</purple>:
+            <blue>return</blue> document.getElementsByTagName(<y>sel</y>);
+            <blue>break</blue>;
+        <blue>default</blue>:
+            console.<red>error</red>(<purple>"Type kann nur die Werte id, class und tag annehmen."</purple>);
+    }
+}
+                        </code>
+                    </div>
+                    <div class="chapter-text-text">
+                        Die erste Variante ist übersichtlicher und leichter und schneller zu bauen,
+                        weswegen diese Weise von vielen bevorzugt wird.
+                    </div>
+                </div>
+
+                <div class="chapter-text chapter-info">
+                    <div class="chapter-text-title">Switch-Block</div>
+                    <div class="chapter-text-text">
+                        Ein Switch-Block ist ein gängiges Mittel in einigen Programmiersprachen, der einem erlaubt,
+                        für verschiedene Zustände einer Variable einen anderen Codeblock auszuführen.
+                        Das <span class="bold">break-Statement</span> ist nötig, damit die anderen Fälle nicht mehr überprüft werden.
+                        Es bedeutet: "Breche hier ab!".
+                    </div>
+                </div>
+            </div>
+            <div class="page-foot">
+                <div class="direct-group">
+                    <div class="direct-left">
+                        <div class="back-btn btn" href="2.html">Zurück</div>
+                    </div>
+                    <div class="direct-mid">
+                        Soweit verstanden?
+                        Bei Fragen klicke <a target="_blank" href="https://web.whatsapp.com">hier</a>.
+                    </div>
+                    <div class="direct-right">
+                        <div class="fore-btn btn" href="../2/">Weiter</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

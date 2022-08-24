@@ -1,0 +1,239 @@
+/* CHAPTER-LAYOUT */
+
+.chapter-intro {
+    position: relative;
+    margin: 30px 0;
+}
+
+.chapter-intro::before{
+    position: absolute;
+    background-color: green;
+    display: flex;
+
+    left: -20px;
+    width: 2px;
+    height: 100%;
+    content: "";
+    border-radius: 2px;
+}
+
+.chapter-title {
+    font-size: 25px;
+    font-weight: 400;
+    color: green;
+    margin-bottom: 10px;
+}
+
+.chapter-descr{
+    text-align: justify;
+    font-size: 17px;
+}
+
+.chapter-text {
+    position: relative;
+    margin: 20px 0;
+}
+
+.chapter-text-title {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.chapter-text::before {
+    position: absolute;
+    background-color: transparent;
+    display: flex;
+    left: -20px;
+    width: 2px;
+    height: 100%;
+    content: "";
+    border-radius: 2px;
+}
+
+.chapter-info .chapter-text-title {
+    color: var(--infoColor);
+}
+
+.chapter-info::before {
+    background-color: var(--infoColor);
+}
+
+.chapter-warning .chapter-text-title{
+    color: var(--warnColor);
+}
+
+.chapter-warning::before {
+    background-color: var(--warnColor);
+}
+
+/* LISTS */
+
+.chapter-list table {
+    border-collapse: collapse;
+}
+
+.chapter-list tr {
+    border-bottom: 2px solid green;
+}
+
+.chapter-list td {
+    padding: 7px;
+}
+
+.chapter-list td:first-child {
+    text-align: left;
+    font-weight: 500;
+}
+
+.chapter-list td:last-child {
+    text-align: right;
+}
+
+/* CODE */
+
+.code {
+    background-color: rgb(35,35,35);
+    font-size: 15px;
+    border-radius: 2px;
+    border: 2px solid green;
+    color: white;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.code code {
+    white-space: break-spaces;
+}
+
+.markcode {
+    color: red;
+}
+
+inlinecode {
+    display: inline;
+    font-weight: 800;
+    font-family: monospace;
+}
+
+.image-h {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+    border: 2px solid green;
+    margin: 10px 0;
+}
+
+.image-h img {
+    height: auto;
+    width: 100%;
+}
+
+.image-v {
+    height: 200px;
+    width: auto;
+    object-fit: contain;
+    border: 2px solid green;
+    margin: 10px 0;
+}
+
+.image-v img {
+    height: 100%;
+    width: auto;
+}
+
+.image-caption {
+    padding: 5px;
+    border-bottom: 2px solid green;
+}
+
+.direct-group {
+    text-align: right;
+    display: flex;
+}
+
+.direct-left {
+    width: 25%;
+    display: inline-block;
+    text-align: left;
+}
+
+.direct-mid {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+}
+
+.direct-right {
+    width: 25%;
+    display: inline-block;
+    text-align: right;
+}
+
+.btn {
+    cursor: pointer;
+    border: 2px solid green;
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: 1px 0.5px 2px 1px var(--themeColor);
+
+    transition: color, background-color 0.4s,0.4s;
+}
+
+.fore-btn,
+.back-btn {
+    display: inline-flex;
+}
+
+.btn:hover {
+    color: green;
+    background-color: rgb(236, 255, 236);
+}
+
+a {
+    color: inherit;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.1s;
+}
+
+a:hover {
+    text-decoration-color: inherit;
+}
+
+.bold {
+    font-weight: 600;
+    color: green;
+}
+
+.chapter-border {
+    border: 0;
+    border-bottom: 2px solid gray;
+}
+
+red, blue, green, yellow, y, purple, brown {
+    display: inline;
+}
+
+red {
+    color: red;
+}
+
+blue {
+    color: rgb(119, 205, 255);
+}
+
+green {
+    color: rgb(28, 172, 28);
+}
+
+yellow, y {
+    color: yellow;
+}
+
+purple {
+    color: rgb(204, 63, 204);
+}
+
+brown {
+    color: burlywood;
+}

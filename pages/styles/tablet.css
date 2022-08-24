@@ -1,0 +1,5 @@
+.page {
+    max-width: none;
+    width: calc(100% - 100px);
+    border: 0;
+}

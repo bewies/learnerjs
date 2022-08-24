@@ -1,0 +1,106 @@
+.iv {
+    position: fixed;
+    left: 0;
+    top: 56px;
+    height: calc(100% - 111px);
+    width: 260px;
+    background-color: rgb(255, 255, 255);
+    transform: translateX(-310px);
+    z-index: 2;
+    transition: transform 0.5s ease-in-out;
+    border-right: 1px solid var(--themeColor);
+    box-shadow: 0 0 5px 2px var(--themeColor);
+    overflow: hidden auto;
+    text-align: left;
+    padding: 35px 20px 20px 20px;
+}
+
+
+body.ivActive .iv {
+    transform: translateX(0);
+}
+
+.iv-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    box-shadow: 1px 0.5px 2px 1px var(--themeColor);
+    line-height: 18px;
+    height: 17px;
+    font-size: 18px;
+    padding: 0 3px 3px 3px;
+    border-radius: 2px;
+    border: 2px solid green;
+    font-size: 20px;
+}
+
+.iv-folders,
+.iv-files,
+.iv-anchors {
+    position: relative;
+    list-style-type: none;
+    padding-left: 25px;
+}
+
+.iv-files,
+.iv-anchors{
+    overflow: hidden;
+    height: auto;
+    height: 0;
+    transition: height 0.4s ease-in-out;
+}
+
+.iv-folders::before,
+.iv-files::before,
+.iv-anchors::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    width: 0.5px;
+    border-radius: 1px;
+    border: 0;
+}
+
+.iv-folders::before {
+    background-color: green;
+}
+
+.iv-files::before {
+    background-color: gray;
+}
+
+.iv-anchors::before {
+    background-color: var(--themeColor);
+}
+
+.iv-list-entry {
+    font-size: 18px;
+}
+
+.iv-file,
+.iv-folder {
+    font-size: 18px;
+    position: relative;
+}
+
+.iv-caret,
+.iv-caret {
+    position: absolute;
+    left: -12px;
+    top: 0.2em;
+    transition: transform 0.2s;
+}
+
+.iv-folder.active .iv-caret,
+.iv-file.active .iv-caret {
+    transform: rotate(90deg);
+}
+
+.iv-folder.active ~ .iv-files,
+.iv-file.active ~ .iv-anchors {
+    height: auto;
+}

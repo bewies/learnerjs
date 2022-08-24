@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Benedict Wiesler">
+    <meta name="keywords" content="JS Tutorial Einstieg">
+    <meta name="description" content="Anfängerfreundliches Tutorial für JS in Bezug auf HTML-Manipulation">
+
+    <link href="../../../assets/JS.png" type="icon type" rel="icon">
+    <link rel="stylesheet" href="../../../styles/iv.css">
+    <link rel="stylesheet" href="../../../styles/frame.css">
+    <link rel="stylesheet" href="../../../styles/classes.css">
+    <link rel="stylesheet" href="../../../styles/tablet.css" media="screen and (max-width: 950px)">
+    <link rel="stylesheet" href="../../../styles/mobile.css" media="screen and (max-width: 750px)">
+
+    <script src="../../../scripts/functions.js"></script>
+    <script src="../../../scripts/include.js"></script>
+    <script src="../../../scripts/iv.js"></script>
+    <script src="https://lern-altgriechisch.de/base/font-awesome.js"></script>
+    <script src="sketch.js"></script>
+
+    <title>Maxims JavaScript-Einstieg</title>
+</head>
+
+<body>
+    <div include="../../../include/header.html"></div>
+    <div include="../../../include/iv.html"></div>
+    <div class="scroll-barcase">
+        <div class="scroll-bar"></div>
+    </div>
+    <div class="page-wrap">
+        <div class="page">
+            <div class="page-head">
+                <div class="page-head-title">How to <b>J</b>ava<b>S</b>cript</div>
+                <div class="page-head-text">
+                    JavaScript ist eine objektorientierte Programmiersprache für Clientside-Programming.
+                    Das bedeutet, dass das Programm auf den Computer des Nutzers (Clients) geladen wird und erst dort
+                    ausgeführt.
+                    Für Serverside-Programming können Python, PHP, Java aber auch JavaScript benutzt werden.
+                    JS wird vorallem für die Interaktion mit einem HTML-Dokument benutzt.
+                </div>
+            </div>
+            <div class="page-foot">
+                <div class="direct-group">
+                    <div class="direct-left">
+                        
+                    </div>
+                    <div class="direct-mid"></div>
+                    <div class="direct-right">
+                        <div class="fore-btn btn" href="1.html">Weiter</div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-body">
+                <div class="chapter-intro">
+                    <div class="chapter-title">Erste Schritte</div>
+                    <div class="chapter-descr">
+                        JavaScript ist sehr vielseitig, doch der Hauptverwendungszweck ist, eine Website interaktiv zu
+                        machen.
+                        Dafür gibt es die DOM-API. Eine API ist ein Paket, das dir Funktionen für einen bestimmten Zweck
+                        zur
+                        verfügung stellt.
+                        Die DOM ist automatisch in jeder Website in Betrieb.
+                    </div>
+                </div>
+                <div class="chapter-text">
+                    <div class="chapter-text-title">Wo schreibe ich mein Programm?</div>
+                    <div class="chapter-text-text">
+                        Du kannst dein Program direkt in das HTML schreiben.
+                        Die andere Möglichkeit ist, das Programm in eine extra File zu schreiben.
+                        Man benutzt für beide Arten den gleichen Tag, nur mit anderen Attributen:
+                    </div>
+                    <div class="code">
+                        <code>
+&lt;script&gt;&lt;/script&gt;
+&lt;script src=&quot;filename.js&quot;&gt;&lt;/script&gt;
+                        </code>
+                    </div>
+                    <div class="chapter-text-text">
+                        In das erste Beispiel schreibst du direkt dein Programm rein,
+                        sei es <inlinecode>alert("Hello World")</inlinecode> oder andere Dinge.
+                        In das 2. Beispiel wird üblicherweise nichts reingeschrieben,
+                        denn alles, das da drin steht, wird angezeigt,
+                        wenn der Browser des Clients die Ausführung von JS deaktiviert hat.
+                        Es ist empfohlen, seine script-tags in den HEAD zu schreiben, nicht aber in den BODY.
+                        Technisch ist beides möglich.
+                    </div>
+                </div>
+                <div class="chapter-text chapter-warning">
+                    <div class="chapter-text-title">Reihenfolge beachten!!!</div>
+                    <div class="chapter-text-text">
+                        Ein HTML-Dokument wird von oben nach unten gelesen, so auch der JS-Code.
+                        Will man aber HTML-Elemente ansprechen, die weiter unten im Dokument stehen, werden sie nicht
+                        gefunden.
+                        <br><br>
+                        Um das zu umgehen, sorgt man entweder dafür,
+                        dass das Script-Element am Ende des Dokuments im BODY steht, oder,
+                        dass die Elemente erst nach dem Laden der kompletten Seite abgefragt werden.
+                        Letzteres erfolgt über das onload-Event.
+                    </div>
+                </div>
+                <div class="chapter-text chapter-info">
+                    <div class="chapter-text-title">Wartung und Tests</div>
+                    <div class="chapter-text-text">
+                        Die Browser Microsoft Edge und Google Chrome, aber auch Mozilla Firefox beinhalten eine Entwicklungsumgebung für HTML, JS
+                        und CSS.
+                        Sie besteht vor allem aus einer <span class="bold">HTML-Elemente-Ansicht</span> mit den entsprechend als Text assoziierten
+                        Styles
+                        und einer <span class="bold">JavaScript-Console</span>. Letztere ist praktisch um nachzuschauen, wie bzw. ob das Programm
+                        funktioniert hat.
+                        Ausserdem werden dort die Syntaxfehler und andere Fehler, die im Programm sind, angezeigt.
+                        Du erreichst sie, indem du die Tastenkombination <span class="bold">Strg + Shift + i</span> benutzst.
+                    </div>
+                </div>
+                <div class="image-h">
+                    <div class="image-caption">HTML-Ansicht</div>
+                    <img src="assets/html-google.png" alt="Google-HTML Entwicklertools">
+                </div>
+                <div class="image-h">
+                    <div class="image-caption">Konsole</div>
+                    <img src="assets/console-google.png" alt="Google-HTML Entwicklertools">
+                </div>
+            </div>
+            <div class="page-foot">
+                <div class="direct-group">
+                    <div class="direct-left">
+                        
+                    </div>
+                    <div class="direct-mid">
+                        Soweit verstanden?
+                        Bei Fragen klicke <a target="_blank" href="https://web.whatsapp.com">hier</a>.
+                    </div>
+                    <div class="direct-right">
+                        <div class="fore-btn btn" href="1.html">Weiter</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

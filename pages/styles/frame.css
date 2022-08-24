@@ -1,0 +1,189 @@
+:root {
+    --themeColor: rgb(180, 180, 180);
+    --infoColor: rgb(196, 181, 49);
+    --warnColor: rgb(196, 49, 49);
+}
+
+::-webkit-scrollbar {
+    width: 13px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color: #fcfcfc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+*[onclick] {
+    cursor: pointer;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    text-align: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    background-color: rgb(243, 243, 243);
+    color: rgb(109, 109, 109);
+    margin: 0 auto;
+}
+
+.page-header {
+    position: fixed;
+    top: 5px;
+    left: 0;
+
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    background-color: white;
+    z-index: 5;
+    box-shadow: 0 0 5px 2px var(--themeColor);
+    font-size: 110%;
+}
+
+.page-header-nav {
+    width: 90%;
+    padding: calc(25px - 0.5em) 0;
+    line-height: 1em;
+}
+
+nav a {
+    margin: 0 10px;
+}
+
+.page-header-left {
+    padding: 0 10px;
+    height: 100%;
+    text-align: center;
+    display: inline-flex;
+}
+
+.page-header-left > * {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.page-header-img {
+    width: 100%;
+    height: 100%;
+}
+
+.page-iv-trigger {
+    width: 100%;
+    height: 100%;
+}
+
+.page-iv-trigger-box {
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    font-size: 20px;
+    padding: 8px;
+    cursor: pointer;
+    box-shadow: 1px 0.5px 2px 1px var(--themeColor);
+    border-radius: 3px;
+    border: 2px solid green;
+    margin: 5px auto;
+
+    transition: color, background-color 0.4s,0.4s;
+}
+
+.page-iv-trigger-box:hover {
+    color: green;
+    background-color: rgb(236, 255, 236);
+}
+
+.page-header-img img {
+    height: 100%;
+}
+
+.page-wrap {
+    margin: 60px 0 0 0;
+    text-align: center;
+    
+    position: relative;
+    width: 100%;
+    min-height: calc(100% - 50px);
+    transition: width 0.5s ease-in-out;
+}
+
+.page {
+    width: calc(100% - 100px - 2px);
+    max-width: 800px;
+    min-height: calc(100% - 100px);
+
+    border-color: var(--themeColor);
+    border-style: solid;
+    border-width: 0 1px;
+    box-shadow: 0 0 5px 2px var(--themeColor);
+    background-color: white;
+
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.page-head {
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgb(245, 245, 245);
+}
+
+.page-head-title {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.page-head-title b {
+    color: green;
+}
+
+.page-head-text {
+    text-align: justify;
+}
+
+.page-body {
+    margin-top: 30px;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.page-foot {
+    padding: 20px 0;
+}
+
+/* Scrollbar */
+
+.scroll-barcase {
+    display: flex;
+    width: 100%;
+    height: 5px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgb(216, 216, 216);
+    box-shadow: 0 0 2px 0 var(--themeColor);
+    z-index: 5;
+
+    transition: width 0.5s ease-in-out;
+}
+
+.scroll-bar {
+    height: 100%;
+    width: 0;
+    background-color: green;
+    border-top-right-radius: 2.5px;
+    border-bottom-right-radius: 2.5px;
+}
