@@ -1,0 +1,15 @@
+{
+  "name": "learnerjs",
+  "version": "1.0.0",
+  "description": "A template for a learning website",
+  "main": "start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Benedict Wiesler",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "url": "^0.11.0"
+  }
+}
