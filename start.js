@@ -1,15 +1,9 @@
 const Express = require("express");
-const { readFile } = require("fs");
 const Fs = require("fs/promises");
 const fs = require("fs");
 const path = require("path");
-const { url } = require("inspector");
 const App = Express();
 const Port = 3000;
-
-// TODO Get HTML, CSS, JavaScript from other PC
-// TODO Populate static HTML with File data
-// TODO Generate HTML, Javascript from JSON
 
 App.get('/*', async (req, res) => {
     const sysPath = "pages"+req.url;
@@ -17,9 +11,14 @@ App.get('/*', async (req, res) => {
         if (!fs.existsSync(sysPath)) {
             res.status("404").send("Not found!");
         }
-        const jsonObject = JSON.parse(await (await Fs.readFile(sysPath)).toString());
-        const htmlPage = populatePageWithJson(jsonObject);
-        res.send(htmlPage);
+        try {
+            const jsonObject = JSON.parse(await (await Fs.readFile(sysPath)).toString());
+            const htmlPage = populatePageWithJson(jsonObject);
+            res.send(htmlPage);
+        } catch (e) {
+            console.error(e);
+            res.send("JSON-Compilation failed");
+        }
         return;
     }
     res.sendFile(sysPath, {"root": __dirname});
