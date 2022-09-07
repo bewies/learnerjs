@@ -1,0 +1,16 @@
+{
+    "type": "body",
+    "header": {
+        "type": "header",
+        "logo": "google.de"
+    },
+    "iv": {
+        "type": "iv",
+        "tree": "someTree"
+    },
+    "chapters": [
+        {
+            "type": "chapter"
+        }
+    ]
+}
