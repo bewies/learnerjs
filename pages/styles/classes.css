@@ -1,3 +1,19 @@
+/* TEMP */
+
+:root {
+    --main-color: #2f5073;
+    --second-color: #919eb1;
+    --third-color: #4f5b71;
+    --fourth-color: #8bbce3;
+    --border-color: gainsboro;
+    --font-color: #8f8f8f;
+    --font-color2: gainsboro;
+    --grey-color: #f2f2f2;
+    --grey-color2: #767676;
+}
+
+/* TEMP ENDE*/
+
 /* CHAPTER-LAYOUT */
 
 .chapter-intro {
@@ -7,9 +23,8 @@
 
 .chapter-intro::before{
     position: absolute;
-    background-color: green;
+    background-color: var(--main-color);
     display: flex;
-
     left: -20px;
     width: 2px;
     height: 100%;
@@ -20,7 +35,7 @@
 .chapter-title {
     font-size: 25px;
     font-weight: 400;
-    color: green;
+    color: var(--main-color);
     margin-bottom: 10px;
 }
 
@@ -51,19 +66,19 @@
     border-radius: 2px;
 }
 
-.chapter-info .chapter-text-title {
+.chapter-textinfo .chapter-text-title {
     color: var(--infoColor);
 }
 
-.chapter-info::before {
+.chapter-textinfo::before {
     background-color: var(--infoColor);
 }
 
-.chapter-warning .chapter-text-title{
+.chapter-textwarning .chapter-text-title {
     color: var(--warnColor);
 }
 
-.chapter-warning::before {
+.chapter-textwarning::before {
     background-color: var(--warnColor);
 }
 
@@ -74,7 +89,7 @@
 }
 
 .chapter-list tr {
-    border-bottom: 2px solid green;
+    border-bottom: 2px solid var(--main-color);
 }
 
 .chapter-list td {
@@ -92,17 +107,17 @@
 
 /* CODE */
 
-.code {
+.chapter-text-code {
     background-color: rgb(35,35,35);
     font-size: 15px;
     border-radius: 2px;
-    border: 2px solid green;
+    border: 2px solid var(--main-color);
     color: white;
     margin: 10px 0;
     padding: 5px;
 }
 
-.code code {
+.chapter-text-code code {
     white-space: break-spaces;
 }
 
@@ -113,38 +128,37 @@
 inlinecode {
     display: inline;
     font-weight: 800;
-    font-family: monospace;
 }
 
-.image-h {
+.chapter-text-imgH {
     height: auto;
     width: 100%;
     object-fit: contain;
-    border: 2px solid green;
+    border: 2px solid var(--main-color);
     margin: 10px 0;
 }
 
-.image-h img {
+.chapter-text-imgH img {
     height: auto;
     width: 100%;
 }
 
-.image-v {
+.chapter-text-imgV {
     height: 200px;
     width: auto;
     object-fit: contain;
-    border: 2px solid green;
+    border: 2px solid var(--main-color);
     margin: 10px 0;
 }
 
-.image-v img {
+.chapter-text-imgV img {
     height: 100%;
     width: auto;
 }
 
 .image-caption {
     padding: 5px;
-    border-bottom: 2px solid green;
+    border-bottom: 2px solid var(--main-color);
 }
 
 .direct-group {
@@ -172,7 +186,7 @@ inlinecode {
 
 .btn {
     cursor: pointer;
-    border: 2px solid green;
+    border: 2px solid var(--main-color);
     padding: 5px;
     border-radius: 3px;
     box-shadow: 1px 0.5px 2px 1px var(--themeColor);
@@ -186,8 +200,8 @@ inlinecode {
 }
 
 .btn:hover {
-    color: green;
-    background-color: rgb(236, 255, 236);
+    color: var(--main-color);
+    background-color: blue;
 }
 
 a {
@@ -202,38 +216,10 @@ a:hover {
 
 .bold {
     font-weight: 600;
-    color: green;
+    color: var(--main-color);
 }
 
 .chapter-border {
     border: 0;
     border-bottom: 2px solid gray;
-}
-
-red, blue, green, yellow, y, purple, brown {
-    display: inline;
-}
-
-red {
-    color: red;
-}
-
-blue {
-    color: rgb(119, 205, 255);
-}
-
-green {
-    color: rgb(28, 172, 28);
-}
-
-yellow, y {
-    color: yellow;
-}
-
-purple {
-    color: rgb(204, 63, 204);
-}
-
-brown {
-    color: burlywood;
 }

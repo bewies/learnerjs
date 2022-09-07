@@ -1,16 +1,94 @@
 {
-    "type": "body",
-    "header": {
-        "type": "header",
-        "logo": "google.de"
+    "page": {
+        "title": "TITLE"
     },
-    "iv": {
-        "type": "iv",
-        "tree": "someTree"
-    },
-    "chapters": [
+    "contents": [
+        {"type": "header"},
+        {"type": "iv"},
+        {"type": "scrollbar"},
         {
-            "type": "chapter"
+            "type": "page",
+            "head": {
+                "type": "pageHead",
+                "title": "PAGE-HEAD-TITLE",
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eius iste corporis alias totam sint doloribus debitis ullam molestias similique aperiam dolor neque ducimus labore omnis, harum, fugit et repellat."
+            },
+            "body": {
+                "type": "pageBody",
+                "chapters": [
+                    {
+                        "type": "chapter",
+                        "intro": {
+                            "type": "chapterIntro",
+                            "title": "CHAPTER-INTRO-TITLE",
+                            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eius iste corporis alias totam sint doloribus debitis ullam molestias similique aperiam dolor neque ducimus labore omnis, harum, fugit et repellat."
+                        },
+                        "blocks": [
+                            {
+                                "type": "chapterBlock",
+                                "color": "warning",
+                                "title": "CHAPTER-BLOCK-TITLE",
+                                "contents": [
+                                    {
+                                        "type": "chapterText",
+                                        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eius iste corporis alias totam sint doloribus debitis ullam molestias similique aperiam dolor neque ducimus labore omnis, harum, fugit et repellat."
+                                    },
+                                    {
+                                        "type": "chapterImg",
+                                        "src": "https://www.lern-altgriechisch.de/BASE/img/Logo.png",
+                                        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eius iste corporis alias totam sint doloribus debitis ullam molestias similique aperiam dolor neque ducimus labore omnis, harum, fugit et repellat."
+                                    },
+                                    {
+                                        "type": "chapterText",
+                                        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eius iste corporis alias totam sint doloribus debitis ullam molestias similique aperiam dolor neque ducimus labore omnis, harum, fugit et repellat."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "chapterBlock",
+                                "color": "",
+                                "title": "CHAPTER-BLOCK-TITLE",
+                                "contents": [
+                                    {
+                                        "type": "chapterImg",
+                                        "src": "https://www.lern-altgriechisch.de/BASE/img/admin.png",
+                                        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eius iste corporis alias totam sint doloribus debitis ullam molestias similique aperiam dolor neque ducimus labore omnis, harum, fugit et repellat."
+                                    },
+                                    {
+                                        "type": "chapterText",
+                                        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eius iste corporis alias totam sint doloribus debitis ullam molestias similique aperiam dolor neque ducimus labore omnis, harum, fugit et repellat."
+                                    },
+                                    {
+                                        "type": "chapterText",
+                                        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eius iste corporis alias totam sint doloribus debitis ullam molestias similique aperiam dolor neque ducimus labore omnis, harum, fugit et repellat."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "chapterBlock",
+                                "color": "info",
+                                "title": "CHAPTER-BLOCK-TITLE",
+                                "contents": [
+                                    {
+                                        "type": "chapterImg",
+                                        "src": "https://www.lern-altgriechisch.de/BASE/img/admin.png",
+                                        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eius iste corporis alias totam sint doloribus debitis ullam molestias similique aperiam dolor neque ducimus labore omnis, harum, fugit et repellat."
+                                    },
+                                    {
+                                        "type": "chapterText",
+                                        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eius iste corporis alias totam sint doloribus debitis ullam molestias similique aperiam dolor neque ducimus labore omnis, harum, fugit et repellat."
+                                    },
+                                    {
+                                        "type": "chapterText",
+                                        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eius iste corporis alias totam sint doloribus debitis ullam molestias similique aperiam dolor neque ducimus labore omnis, harum, fugit et repellat."
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "foot": {"type": "pageFoot"}
         }
     ]
 }

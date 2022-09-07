@@ -1,0 +1,145 @@
+{
+    "name": "Altes Layout",
+    "icon": "https://www.lern-altgriechisch.de/BASE/img/Logo.png",
+    "styles": [
+        {"src": "/styles/iv.css"},
+        {"src": "/styles/frame.css"},
+        {"src": "/styles/classes.css"},
+        {
+            "src": "/styles/tablet.css",
+            "media": "screen and (max-width: 950px)"
+        },
+        {
+            "src": "/styles/mobile.css",
+            "media": "screen and (max-width: 750px)"
+        }
+    ],
+    "scripts": [
+        {"src": "/scripts/functions.js"},
+        {"src": "/scripts/iv.js"},
+        {"src": "/scripts/font-awesome.js"},
+        {"src": "sketch.js"}
+    ],
+    "components": {
+        "header": [
+            "<div class=\"page-header\"><div class=\"page-header-left\"><div class=\"page-header-img\"><img src=\"/assets/JS.png\"alt=\"Logo\"></div><div class=\"page-iv-trigger\"onclick=\"iv()\"><div class=\"page-iv-trigger-box\"><i class=\"fas fa-bars\"></i></div></div></div><div class=\"page-header-nav\"><nav><ahref=\"./\">Start</a></nav></div></div>"
+        ],
+        "iv": [
+            "<div class=\"iv\"><div class=\"iv-close\"onclick=\"iv('close')\"><i class=\"fas fa-times\"></i></div><ul class=\"iv-folders\"><li><div class=\"iv-folderactive\"><ahref=\"\">Lernpfad</a><i class=\"fas fa-caret-rightiv-caret\"></i></div><ul class=\"iv-files\"><li><div class=\"iv-fileactive\"><i class=\"fas fa-caret-rightiv-caret\"></i><ahref=\"\">Willkommen</a></div><ul class=\"iv-anchors\"><li><ahref=\"\">Selektoren</a></li><li><ahref=\"\">Variablen</a></li><li><ahref=\"\">Funktionen</a></li></ul></li></ul></li><li><div class=\"iv-folderactive\"><ahref=\"\">Erklärungen</a><i class=\"fas fa-caret-rightiv-caret\"></i></div><ul class=\"iv-files\"><li><div class=\"iv-fileactive\"><i class=\"fas fa-caret-rightiv-caret\"></i><ahref=\"../../erklaerungen/0/\">OOP</a></div><ul class=\"iv-anchors\"><li><ahref=\"\">Objekte</a></li><li><ahref=\"\">Klassen</a></li><li><ahref=\"\">Vererbung</a></li></ul></li><li><div class=\"iv-fileactive\"><i class=\"fas fa-caret-rightiv-caret\"></i><ahref=\"\">Datatypes</a></div><ul class=\"iv-anchors\"><li><ahref=\"\">ZahlenundStrings</a></li><li><ahref=\"\">ListenundArrays</a></li><li><ahref=\"\">Funktionen</a></li></ul></li><li><div class=\"iv-fileactive\"><i class=\"fas fa-caret-rightiv-caret\"></i><ahref=\"\">Variablen</a></div><ul class=\"iv-anchors\"><li><ahref=\"\">Syntax</a></li><li><ahref=\"\">Scope(Kapselung)</a></li></ul></li><li><div class=\"iv-fileactive\"><i class=\"fas fa-caret-rightiv-caret\"></i><ahref=\"\">Basics</a></div><ul class=\"iv-anchors\"><li><ahref=\"\">Selektoren</a></li></ul></li></ul></li></ul></div>"
+        ],
+        "scrollbar": [
+            "<div class=\"scroll-barcase\"><div class=\"scroll-bar\"></div></div>"
+        ],
+        "page": [
+            "<div class='page-wrap'>",
+            "<div class='page'>",
+            {
+                "keyname": "head"
+            },
+            {
+                "keyname": "foot"
+            },
+            {
+                "keyname": "body"
+            },
+            {
+                "keyname": "foot"
+            },
+            "</div>",
+            "</div>"
+        ],
+        "pageHead": [
+            "<div class=\"page-head\"><div class=\"page-head-title\">",
+            {
+                "keyname": "title"
+            },
+            "</div><div class=\"page-head-text\">",
+            {
+                "keyname": "text"
+            },
+            "</div></div>"
+        ],
+        "pageFoot": [
+            "<div class=\"page-foot\"><div class=\"direct-group\"><div class=\"direct-left\"><div class=\"back-btnbtn\"href=\"{json.page.prevPage}\">Zurück</div></div><div class=\"direct-mid\"></div><div class=\"direct-right\"><div class=\"fore-btnbtn\"href=\"{json.page.prevPage}\">Weiter</div></div></div></div>"
+        ],
+        "pageBody": [
+            "<div class='page-body'>",
+            {
+                "array": true,
+                "keyname": "chapters",
+                "separator": "<hr class='chapter-border'>"
+            },
+            "</div>"
+        ],
+        "chapter": [
+            {
+                "keyname": "intro"
+            },
+            {
+                "array": true,
+                "keyname": "blocks",
+                "separator": ""
+            }
+        ],
+        "chapterIntro": [
+            "<div class='chapter-intro'>",
+            "<div class='chapter-title'>",
+            {
+                "keyname": "title"
+            },
+            "</div>",
+            "<div class='chapter-descr'>",
+            {
+                "keyname": "text"
+            },
+            "</div>",
+            "</div>"
+        ],
+        "chapterBlock": [
+            "<div class='chapter-text chapter-text",
+            {"keyname": "color"}
+            ,"'>",
+            "<div class='chapter-text-title'>",
+            {
+                "keyname": "title"
+            },
+            "</div>",
+            {
+                "keyname": "contents",
+                "array": true,
+                "separator": ""
+            },
+            "</div>"
+        ],
+        "chapterText": [
+            "<div class='chaper-text-text'>",
+            {
+                "keyname": "text"
+            },
+            "</div>"
+        ],
+        "chapterCode": [
+            "<div class='chaper-text-code'>",
+            "<code>",
+            {
+                "keyname": "text"
+            },
+            "</code>",
+            "</div>"
+        ],
+        "chapterImg": [
+            "<div class='chapter-text-imgH'>",
+            "<div class='image-caption'>",
+            {
+                "keyname": "text"
+            },
+            "</div>",
+            "<img src='",
+            {
+                "keyname": "src"
+            },
+            "'alt='Bild'>",
+            "</div>"
+        ]
+    }
+}
